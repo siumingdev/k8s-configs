@@ -1,0 +1,8 @@
+apiVersion: skaffold/v1
+kind: Config
+deploy:
+  kubeContext: minikube
+  kubectl:
+    manifests:
+      - ./mysql/mysql-pv.yaml
+      - ./mysql/mysql-deployment.yaml
